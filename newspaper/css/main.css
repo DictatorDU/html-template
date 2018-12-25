@@ -1,0 +1,761 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+.tamplate {
+    background: #E0E0E0;
+    width: 1000px;
+    margin: 5px auto;
+    font-family: Georgia;
+    box-shadow: 0 0 17px 0;
+}
+.tamplate .content {
+    width: 980px;
+    margin: 0 auto;
+}
+.clear{
+    overflow: hidden;
+}
+.tamplate .header {
+    width: 100%;
+    height: 225px;
+}
+.header .top {
+    width: 100%;
+    height: 45px;
+    background: #2D2928;
+    color: #f1f1f1;
+}
+.header .top .left {
+    width: 45%;
+    float: left;
+}
+.header .top .left ul {
+    list-style: none;
+    margin-top: 10px;
+    margin-left: -30px;
+}
+.header .top .left ul li {
+    display: inline;
+    font-size: 13px;
+}
+.header .top .left ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+.header .top .left ul li a:hover {
+    color: #fff;
+}
+.header .top .right {
+    width: 45%;
+    float: right;
+}
+.header .top .right .right-icon {
+    float: right;
+    margin-top: 5px;
+}
+.header .top .right i {
+    margin-right: 5px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 14px;
+    width: 15px;
+    color: #333;
+    padding-left: 12px;
+    transition: all .5s;
+    border: 1px solid #fff;
+}
+.header .top .right i:hover {
+    color: #fff;
+    background: #333;
+    border: 1px solid #fff;
+}
+.header .bottom {
+    width: 980px;
+    margin: 0 auto;
+    border-bottom: 1px solid #999;
+}
+.header .bottom h1 {
+    font-size: 100px;
+    line-height: 0;
+    text-align: center;
+    color: #282828;
+}
+.header .bottom h2 {
+    font-size: 20px;
+    text-align: center;
+}
+.main-menubar {
+    border-top: 1px solid #999;
+    margin-top: 2px;
+    border-bottom: 1px solid #999;
+}
+.main-menubar ul {
+    list-style: none;
+    font-family: Georgia;
+    padding-bottom: 9px;
+    margin-top: 9px;
+    margin-bottom: 0px;
+    margin-left: -18px;
+}
+.main-menubar ul li {
+    display: inline;
+    padding-right: 10px;
+}
+.main-menubar ul li a {
+    text-decoration: none;
+    color: #555;
+    font-family: normal;
+    font-size: 14px;
+}
+.main-menubar ul li a:hover {
+    color: #333;
+}
+.main-content {
+    width: 980px;
+    margin-top: 2px;
+}
+.main-content .content-one {
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    margin-bottom: 2px;
+}
+.main-content .content-one .left {
+    width: 480px;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+.main-content .content-one .left img {
+    width: 480px;
+}
+.main-content .content-one .left h2 {
+    color: #555;
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+.main-content .content-one .left p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 6px;
+}
+.main-content .content-one .right {
+    width: 480px;
+    float: right;
+}
+.main-content .content-one .right .img {
+    border: 1px solid #666;
+    background: #E0E0E0;
+    display: inline-block;
+    padding: 2px;
+    float: left;
+    margin-right: 13px;
+}
+.main-content .content-one .right .right-two {
+    float: right;
+}
+.main-content .content-one .right .img img {
+    width: 100px;
+    height: 100px;
+}
+.main-content .content-one .right h2 {
+    margin: 0px;
+    padding: 0px;
+    display: inline;
+    color: #666;
+    font-size: 20px;
+}
+.main-content .content-one .right p {
+    margin-top: 5px;
+    padding-left: 13px;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.2;
+}
+.contenr-two {
+    width: 100%;
+    margin-top: 2px;
+    border-top: 1px solid #999;
+    padding-top: 25px;
+    border-bottom: 1px solid #999;
+    padding-bottom: 15px;
+}
+.contenr-two .main-left {
+    width: 650px;
+    float: left;
+}
+.contenr-two .main-left .main-top{}
+.contenr-two .main-right {
+    width: 320px;
+    float: right;
+}
+
+.contenr-two .left {
+    width: 315px;
+    float: left;
+    margin-right: 10px;
+}
+.contenr-two .left h2 {
+    color: #555;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #777;
+    font-size: 19px;
+}
+.contenr-two .left .news {
+    margin-bottom: 32px;
+}
+.contenr-two .left .news .img {
+    float: left;
+    padding: 3px;
+    border: 1px solid #999;
+    margin-right: 10px;
+}
+.contenr-two .left .news .img img {
+    width: 60px;
+    height: 60px;
+}
+.contenr-two .left .news .txt{}
+.contenr-two .left .news .txt h4 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    color: #555;
+    line-height: 1;
+}
+.contenr-two .left .news .txt p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1;
+}
+.contenr-two .left .news .txt a {
+    font-size: 11px;
+    text-decoration: none;
+    color: #B26760;
+    float: right;
+    line-height: 1;
+    padding-right: 6px;
+}
+.contenr-two .left .news .txt a:hover {
+    color: #e03c3c;
+}
+
+.contenr-two .middle {
+    width: 315px;
+    float: left;
+    margin-right: 10px;
+}
+.contenr-two .middle h2 {
+    color: #555;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #777;
+    font-size: 19px;
+}
+.contenr-two .middle .news {
+    margin-bottom: 32px;
+}
+.contenr-two .middle .news .img {
+    float: left;
+    padding: 3px;
+    border: 1px solid #999;
+    margin-right: 10px;
+}
+.contenr-two .middle .news .img img {
+    width: 60px;
+    height: 60px;
+}
+.contenr-two .middle .news .txt{}
+.contenr-two .middle .news .txt h4 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    color: #555;
+    line-height: 1;
+}
+.contenr-two .middle .news .txt p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    color: #555;
+    line-height: 1;
+    font-size: 13px;
+}
+.contenr-two .middle .news .txt a {
+    font-size: 11px;
+    text-decoration: none;
+    color: #B26760;
+    float: right;
+    line-height: 1;
+    padding-right: 6px;
+}
+.contenr-two .middle .news .txt a:hover {
+    color: #f52323;
+}
+
+
+.contenr-two .right {
+    width: 315px;
+    float: left;
+}
+
+.contenr-two .right .right-one {
+    width: 155px;
+    float: left;
+}
+.contenr-two .right .right-one h3 {
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+    border-top: 5px solid #777;
+    margin-bottom: 0px;
+    margin-top: 4px;
+    padding-top: 5px;
+}
+.contenr-two .right .right-one img {
+    width: 155px;
+}
+
+.contenr-two .right .right-two {
+    width: 155px;
+    float: left;
+    margin-left: 5px;
+}
+
+.contenr-two .right .right-two .sub-right{}
+.contenr-two .right .right-two .sub-right h3 {
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+    border-top: 5px solid #777;
+    margin-bottom: 0px;
+    margin-top: 4px;
+    padding-top: 5px;
+    padding-left: 6px;
+}
+.contenr-two .right .right-two .sub-right ul {
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 5px;
+    font-size: 13.5px;
+    margin-top: 1px;
+}
+.contenr-two .right .right-two .sub-right ul li{}
+.contenr-two .right .right-two .sub-right ul li a {
+    text-decoration: none;
+    color: #A25952;
+}
+.contenr-two .right .right-two .sub-right ul li a:hover {
+    color: #e03c3c;
+}
+.contenr-two .bottom {
+    width: 640px;
+    float: left;
+    border-top: 1px solid #999;
+    padding-top: 2px;
+}
+.contenr-two .bottom .bottom-menubar {
+    border-top: 1px solid #999;
+}
+.contenr-two .bottom .bottom-menubar ul {
+    list-style: none;
+    margin-left: -40px;
+}
+.contenr-two .bottom .bottom-menubar ul li {
+    display: inline;
+    background: #2D2928;
+    padding: 9px 17px;
+    margin-right: -3px;
+}
+.contenr-two .bottom .bottom-menubar ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.contenr-two .bottom-content {
+    width: 100%;
+}
+.contenr-two .bottom-content .content {
+    width: 140px;
+    float: left;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.contenr-two .bottom-content .content h4 {
+    font-size: 13px;
+    margin-top: 0px;
+    margin-bottom: 4px;
+    color: #982115;
+}
+.contenr-two .bottom-content .content .img {
+    padding: 2px;
+    margin: 0px;
+    border: 1px solid #555;
+}
+.contenr-two .bottom-content .content .img img {
+    width: 134px;
+}
+.contenr-two .bottom-content .content p {
+    margin: 0px;
+    line-height: 1.5;
+    font-size: 13px;
+    color: #444;
+    margin-top:5px;
+}
+.contenr-two .bottom-content .content span {
+    font-size: 12px;
+    color: #555;
+}
+.contenr-two .bottom-content .content a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #982115;
+    padding-left: 5px;
+}
+.contenr-two .bottom-content .content a:hover {
+    color: #E03C3C;
+}
+
+
+.content-three {
+    border-top: 1px solid #999;
+    margin-top: 2px;
+    padding-top: 10px;
+    border-bottom: 4px solid #999;
+    padding-bottom: 10px;
+    margin-bottom: 3px;
+}
+.content-three .content {
+    width: 188px;
+    float: left;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.content-three .content h3 {
+    padding-bottom: 8px;
+    margin-top: 15px;
+    border-bottom: 1px solid #999;
+    margin-bottom: 0px;
+    color: #555;
+    font-size: 18px;
+}
+.content-three .content a {
+    text-decoration: none;
+    color: #7e0808;
+    font-size: 15px;
+    display: block;
+    line-height: 1.5;
+}
+.footer .content {
+    padding: 30px 0px;
+    padding-bottom: 45px;
+}
+.footer .content {
+    padding: 30px 0px;
+    padding-bottom: 45px;
+}
+.footer .content .span-one {
+    float: left;
+    color: #555;
+    font-size: 14px;
+}
+.footer .content .span-two{
+    float: right;
+    color: #555;
+    font-size: 14px;
+}
